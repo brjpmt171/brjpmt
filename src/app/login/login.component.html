@@ -1,0 +1,106 @@
+<!--login modal-->
+<div class="modalLogin">
+  <div class="modal fade" id="popLogin">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          
+        <div class="modal-header bg-secondary">
+          <h3 class="offset-sm-4 text-info">User Login</h3>
+        </div>
+        
+        <div class="modal-body">
+            <ul class="nav nav-tabs bg-light"  role="tab-list">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#renter-login">Login as a Renter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#owner-login">Login as a Owner</a>
+                </li>
+            </ul>
+            <br/>
+              <div class="tab-content">
+                  <!--Renter Login-->
+                  <div id="renter-login" class="container tab-pane active">
+                      <h4>Renter Login Form</h4>  
+                    <div class="col-md-8 offset-sm-2">
+                         <form [formGroup]="userForm"  novalidate (submit)="save()">
+                                
+                        <div>
+                          <input type="text" formControlName="email" name="email" placeholder="Enter your Email Id ..." class='form-control'/>
+                          <span *ngIf="userForm.controls['email'].errors">
+                              <span class='text-danger' *ngIf="userForm.controls['email'].errors.required">
+                                * Email is Required
+                              </span>
+                              <span class='text-danger' *ngIf="userForm.controls['email'].errors.email">
+                                Please specify your register Email
+                              </span>
+                          </span>
+                        </div>
+
+                        
+
+                       
+
+                        <div>
+                          <input type="password" formControlName="password" name="password" placeholder="Enter your Password ..." class='form-control'/>
+                          <span *ngIf="userForm.status =='INVALID' ">
+                              <span class='text-danger' *ngIf="userForm.controls['password'].errors">
+                                  <span *ngIf="userForm.controls['password'].errors.required">
+                                    * Please create a Password
+                                  </span>
+                              </span>  
+                          </span>
+                        </div>
+
+                          <input type="submit" name="save" value="Sign In" class='btn btn-primary'/>
+                        </form>
+                      </div>
+                  </div>
+  
+                  <!--Owner login-->
+                  <div id="owner-login" class="container tab-pane">
+                      <h4>Owner Login Form</h4>
+                    <div class="col-md-8 offset-sm-2">
+                    <form [formGroup]="userForm"  novalidate (submit)="saveOwner()">
+                     
+                    <div>
+                      <input type="text" formControlName="email" name="email" placeholder="Owner Email Id ..." class='form-control'/>
+                      <span *ngIf="userForm.controls['email'].errors">
+                          <span class='text-danger' *ngIf="userForm.controls['email'].errors.required">
+                            * Email is Required
+                          </span>
+                          <span class='text-danger' *ngIf="userForm.controls['email'].errors.email">
+                            Please specify your register Email
+                          </span>
+                      </span>
+                    </div>
+
+                   
+
+                    <div>
+                      <input type="password" formControlName="password" name="password" placeholder="Enter your Password ..." class='form-control'/>
+                      <span *ngIf="userForm.status =='INVALID' ">
+                          <span class='text-danger' *ngIf="userForm.controls['password'].errors">
+                              <span *ngIf="userForm.controls['password'].errors.required">
+                                * Please enter Password
+                              </span>
+                          </span>  
+                      </span>
+                    </div>
+
+                      <input type="submit" name="save" value="Sign In" class='btn btn-primary'/>
+                    </form>
+                  </div>
+                  </div>
+              </div>
+        </div>
+        
+        
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>

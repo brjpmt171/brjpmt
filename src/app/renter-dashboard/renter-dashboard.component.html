@@ -1,0 +1,133 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            
+  <a class="navbar-brand" href="#">USER DASHBOARD</a>
+    <div class="input-group col-sm-2">
+      <select class="custom-select" id="inputGroupSelect02">
+        <option selected>Choose...</option>
+        <option value="1">Kolkata</option>
+        <option value="2">Bangalore</option>
+        <option value="3">Mumbai</option>
+      </select>
+      <div class="input-group-append">
+        <label class="input-group-text" for="inputGroupSelect02">City</label>
+      </div>
+    </div>
+    <div class="cart">
+    <a href="#"><img src="assets/image/cart_icon.gif" width="40px" height="40px" ></a>
+    </div>
+  
+</nav>
+<div class="row">
+<div class="menu1">
+  <img src="assets/image/user-icon.png" width="100px" height="100px" /><br/><br/>
+  <h5 style="color:royalblue">Welcome</h5><br/><br/>
+    <ul class="list-group">
+      <li class="list-group-item bg-dark">
+        
+        <a href="#" class="">My Profile</a>
+        
+      </li>
+      <li class="list-group-item bg-dark">
+            
+            <a href="#" class="">Order</a>
+            
+      </li>  
+      <li class="list-group-item bg-dark">
+            
+          <a href="#" class="" >My Wishlist</a>
+          
+    </li>  
+    <li class="list-group-item bg-dark">
+            
+        <a href="#mywallet" class="" data-toggle="tab">My Wallet</a>
+        
+  </li>               
+  <li class="list-group-item bg-dark">
+            
+      <a href="#" class="">Sign Out</a>
+      
+</li>  
+    </ul>
+    
+  </div>
+<div class="col-sm-10">
+  <div class="card">
+    
+    <input type="button" id='slide-toggle' value='Filter' class="btn btn-info" style="width:100px;margin-left:1210px"/>
+    
+    
+    <div style='display:none' id='toggle-content'>
+        <div class="row">
+        <span class="input-group col-sm-3">
+            <select class="custom-select" id="inputGroupSelect02">
+              <option selected>Select Griller Type...</option>
+              <option value="Gas">Gas Grill</option>
+              <option value="Charcoal">Charcoal Grill</option>
+              <option value="Electric">Electric Grill</option>
+              <option value="Portable">Portable Grill</option>
+
+            </select>
+            
+          </span>
+          <span class="col-sm-8">
+          Price Range <input type="range" class="custom-range" name="amount" min="500" max="10000"/>
+          </span>
+          </div>
+    </div>
+    </div>
+    <br/><br/><br/>
+    <!--My Wallet-->
+  <div class="tab-content">
+    
+    <div id="mywallet" class="container tab-pane">
+        <div class="row">
+          <div class="col-md-6">
+      <div class="wallet-show">
+      <div class="card" style="width:400px;height: 220px;">
+        <div class="card_head">
+        <div class="card-header">My Wallet</div>
+      </div>
+      <div class="card_body">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-4">
+        <img src="assets/image/chip-icon.jpg" width="50" height="50">
+            </div>
+            <div class="col-sm-8">
+        <label style="margin-left:70px">User Name</label>
+        <label>Available Amount : </label>5000.00
+        </div>
+        </div>
+        <label style="margin-left:50px;margin-top:20px" readonly required>SL No : </label>
+      </div>
+      </div>
+      </div>
+      </div>
+          </div>
+      <div class="col-md-6">
+      <br/><br/>
+      <h4><u>Activity</u></h4>
+      <br/>
+      <button class="btn btn-primary btn-block">ADD AMOUNT TO WALLET</button>
+      <button class="btn btn-success btn-block">BOOK NOW GRILLER</button>
+
+    </div>
+    </div>
+    
+  </div>
+
+
+  </div>
+</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(()=>{
+    $('#slide-toggle').click(()=>{
+      $('#toggle-content').slideToggle('slow');
+  });
+  });
+  </script>

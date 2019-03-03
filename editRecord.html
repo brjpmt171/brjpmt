@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Edit Driving LC</title>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/redmond/jquery-ui.min.css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+       
+        <script type='text/javascript' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+        <script type='text/javascript' src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+       
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+        <script src="addLC.js" type="text/javascript"></script>
+        <script type="text/javascript">
+       
+        </script>
+    </head>
+    <body onload="editProduct()">
+        <div class="col-sm-4">
+            <form action="drivingLCAdd.html">
+                <div class='form-group'>
+                        <label for='name'>Name</label>
+                        <input type='text' class='form-control' id='name' name='name'/>
+                        
+                        <label for='address'>Address</label>
+                        <input type='textarea' class='form-control' id='address' name='address'/>
+                        <label for='dob'>DOB</label>
+                        <input type='date' class='form-control' id='dob' name='dob'/>
+                        <input type="submit" class='btn btn-primary' value='Save Changes' onclick="savedata()"/>
+                        
+                </div>
+            </form>
+    </div>
+    </body>
+</html>
